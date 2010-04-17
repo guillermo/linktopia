@@ -1,0 +1,54 @@
+body {
+	font-size: medium;
+	font-family: ;
+	
+}
+
+#header {
+	background: #282c33 url('../images/header.jpg') no-repeat center;
+	height: 86px;
+	margin: 0 auto;
+}
+
+h1 {
+	width: 900px;
+	margin: 0 auto;
+}
+
+h1 a {
+	display: block;
+	text-indent: -2000px;
+}
+
+#block h2 {
+	font-size: 30px;
+	font-family: "Arial Rounded MT Bold", "Trebuchet MS", Verdana, Arial, sans-serif;
+	line-height: 40px;
+}
+
+#block {
+	background-color: #e8e8ea;
+	margin: 0 auto;
+	padding: 35px 0;
+	text-align: center;
+	}
+
+#weekly {
+	background: url('../images/bg_r.jpg') repeat-y center;
+} 
+
+#monthly {
+	background: url('../images/bg_g.jpg') repeat-y center;	
+	
+}
+
+/* #legislature {
+	background: url('../images/bg_b.jpg') repeat-y center;
+}*/
+
+.container {
+	background: url('../images/shadow.png') no-repeat center top;
+	width: 900px;
+	margin: 0 auto;
+	padding: 25px 0;
+}
