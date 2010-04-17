@@ -21,8 +21,8 @@ class Deputy < ActiveRecord::Base
     url.match(/idDiputado=(\d*)/)[1].to_i
   end
 
-  def initiatives_url
-    "http://www.congreso.es/portal/page/portal/Congreso/Congreso/Iniciativas?_piref73_2148295_73_1335437_1335437.next_page=/wc/servidorCGI&CMD=VERLST&BASE=IWI9&FMT=INITXLUS.fmt&DOCS=1-200&DOCORDER=FIFO&OPDEF=Y&QUERY=(I).ACIN1.+%26+(#{CGI::escape(name)}).SAUT."
+  def initiatives_url(start_page=1, end_page=200)
+    "http://www.congreso.es/portal/page/portal/Congreso/Congreso/Iniciativas?_piref73_2148295_73_1335437_1335437.next_page=/wc/servidorCGI&CMD=VERLST&BASE=IWI9&FMT=INITXLUS.fmt&DOCS=#{start_page}-#{end_page}&DOCORDER=FIFO&OPDEF=Y&QUERY=(I).ACIN1.+%26+(#{CGI::escape(name)}).SAUT."
   end
 
   def speeches_url
@@ -97,11 +97,13 @@ class Deputy < ActiveRecord::Base
   
   def load_initiatives
     Scrapper.new do |scrapper|
-      scrapper.visit(initiatives_url)
-      require 'ruby-debug'
-      debugger
+      scrapper.visit(initiatives_url(1,1))
       self.initiatives_count = scrapper.at_css('#RESULTADOS_BUSQUEDA .SUBTITULO_CONTENIDO span').inner_html.to_i
-      self.save
+
+      # paginado
+        # listas
+        # titulo_competencias
+      
       
       scrapper.doc.css('p.titulo_iniciativa').size
       

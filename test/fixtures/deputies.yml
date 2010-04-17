@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  photo_url: MyString
+  parliamentary_group: 
+  email: MyString
+  url: MyString
+
+two:
+  name: MyString
+  photo_url: MyString
+  parliamentary_group: 
+  email: MyString
+  url: MyString
