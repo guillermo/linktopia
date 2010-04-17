@@ -1,6 +1,6 @@
 body {
 	font-size: medium;
-	font-family: ;
+	font-family: "Arial Rounded MT Bold", "Trebuchet MS", Verdana, Arial, sans-serif;
 	
 }
 
@@ -33,6 +33,14 @@ h1 a {
 	text-align: center;
 	}
 
+.container h3 {
+	text-align: center;
+	color: #ffffff;
+	margin: 5px 0 15px 0;
+	letter-spacing:1px;
+	font-size: 160%;
+} 
+
 #weekly {
 	background: url('../images/bg_r.jpg') repeat-y center;
 } 
@@ -52,3 +60,59 @@ h1 a {
 	margin: 0 auto;
 	padding: 25px 0;
 }
+
+.deputy {
+	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
+	background: url('../images/arrow1.png') no-repeat center center;
+	width: 650px;
+	margin: 0 auto;
+	color: #ffffff;
+}
+
+.deputy li {
+        /*width: 200px;*/
+        min-height: 250px;
+        border: 1px solid #000;
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        margin: 5px;
+        zoom: 1;
+        *display: inline;
+        _height: 250px;
+
+    }
+
+.deputy li strong {
+	text-align: center;
+	font-size:120%;
+	display: block;
+}
+
+.deputy li strong span{
+	font-size:200%;
+	letter-spacing:2px;
+}
+
+.deputy li .deputy_pic {
+	border: 2px solid #282c33;
+	display: block;
+	margin: 15px 0 15px 25px;
+}
+
+.deputy li p {
+	text-align: center;
+	font-size:90%;
+	font-weight: normal;
+	line-height: 20px;
+	}
+	
+.deputy li p span{
+	font-size:150%;
+letter-spacing:2px;
+font-weight:bold;
+	}
+
+
+
+
