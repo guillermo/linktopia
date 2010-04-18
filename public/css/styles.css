@@ -50,9 +50,9 @@ h1 a {
 	
 }
 
-/* #legislature {
-	background: url('../images/bg_b.jpg') repeat-y center;
-}*/
+#legislature {
+	background: url('../images/bg_r.jpg') repeat-y center;
+}
 
 .container {
 	background: url('../images/shadow.png') no-repeat center top;
@@ -60,6 +60,10 @@ h1 a {
 	margin: 0 auto;
 	padding: 25px 0;
 }
+
+
+/*   Iniciativas por candidato   */
+
 
 .deputy {
 	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
@@ -70,9 +74,8 @@ h1 a {
 }
 
 .deputy li {
-        /*width: 200px;*/
-        min-height: 250px;
-        border: 1px solid #000;
+        width: 300px;
+        min-height: 250px;        
         display: -moz-inline-stack;
         display: inline-block;
         vertical-align: top;
@@ -80,7 +83,6 @@ h1 a {
         zoom: 1;
         *display: inline;
         _height: 250px;
-
     }
 
 .deputy li strong {
@@ -94,10 +96,21 @@ h1 a {
 	letter-spacing:2px;
 }
 
-.deputy li .deputy_pic {
-	border: 2px solid #282c33;
-	display: block;
-	margin: 15px 0 15px 25px;
+
+.deputy div {
+	position: relative;
+	overflow: hidden;
+	width: 110px;
+	margin: 0 auto;
+	height: 165px;
+}
+
+.political_party {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	border-left: 1px dotted white;
+	border-top: 1px dotted white;
 }
 
 .deputy li p {
@@ -114,5 +127,54 @@ font-weight:bold;
 	}
 
 
+/*  Iniciativas por partido */
+ul.team {
+	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
+	background: url('../images/arrow2.png') no-repeat center center;
+	width: 406px;
+	float: left;
+}
+
+ul.team li {
+	width: 203px;
+	display: block;
+	height: 100px;
+	padding-left: 203px;
+	text-align: center;	
+	position: relative;
+	color: #ffffff;
+	font-size: 110%;
+	line-height: 30px;
+	margin-bottom: 100px;
+}
+
+ul.team li span {
+	font-size: 250%;
+	font-weight: bold;
+	margin: 0 50px;
+}
 
 
+.team strong {
+	display: block;
+	position: absolute;
+	width: 203px;
+	left: 0px;
+	top: 0px;
+}
+
+.team strong img {
+	margin: 0px auto;
+	display: block;
+}
+
+
+/* Iniciativas por candidato */
+
+ul.initiatives {
+	width: 406px; 
+}
+
+ul.initiatives .initiatives_images img {
+	margin-left: -3px;
+}

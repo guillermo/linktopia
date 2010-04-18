@@ -1,41 +1,64 @@
 <div id="weekly">
     <div class="container">
-      <h3>Diputados que han aportado...</h3>
+      <h3>Iniciativas por Parlamentarios</h3>
       <ul class="deputy">
         <% @deputies.each do |deputy| %>
         <li>
           <strong><span><%= deputy.initiatives_count %></span> iniciativas</strong>
-          <%= image_tag deputy.political_party.logo_url.to_s, :alt => deputy.political_party_name, :class=> 'deputy_pic', :height => '20px', :style => "position:absolute;" %>
+          <div>
+          <%= image_tag deputy.political_party.logo_url.to_s, :alt => deputy.political_party_name, :class=> 'political_party', :height => '20px', :style => "position:absolute;" %>
           <img class="deputy_pic" src="<%= deputy.photo_url %>" alt="Diputado con más iniciativas" width="110" height="165" />
+          </div>
           <p><%= deputy.name %></p>
         </li>
         <% end %>
       </ul>
+      
+      
     </div>
 </div> <!-- #weekly -->
  
 <div id="monthly">
   <div class="container">
-    <ul><img src="" alt="" width="" height=""></li>
-      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
-      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+    <h3>Por partidos</h3>
+    <ul class="team">
+      <li>
+        <strong><img src="/images/psoe.gif" alt="Logo Psoe" height="81" /></strong>
+        <span>0,7</span> Iniciativas / Diputados</li>
+      <li>
+        <strong><img src="/images/pp.png" alt="Logo PP" height="81" /></strong>
+        <span>0,7</span> Iniciativas / Diputados</li>
     </ul>
+    
+    <ul class="initiatives">
+      <li>
+        <div class="initiatives_images">
+          <% @initiatives_per_candidate.times do %>
+            <%= image_tag "mini-edit.png" %> 
+          <%end%>
+        </div>
+        <strong><%= @initiatives_per_candidate %> iniciativas</strong>
+      </li>
+      <li></li>
+    </ul>
+    
   </div>
-</div> <!-- #monthly -->
+</div>  <!-- #monthly -->
 
 <div id="legislature">
   <div class="container">
-    <ul class="">
-      <li style="">
-        <div><% @initiatives_per_candidate.times do %><%= image_tag "mini-edit.png" %> <%end%></div>
+    <ul class="initiatives">
+      <li>
+        <div class="initiatives_images"><% @initiatives_per_candidate.times do %>
+          <%= image_tag "mini-edit.png" %> 
+        <% end %>
+        </div>
         <strong><%= @initiatives_per_candidate %> iniciativas</strong>
       </li>
       <li></li>
     </ul>
   </div>
+  </div> <!-- #legislature -->
   
   <div class="container">
     <div style="text-align:center; font-size: 30px; line-height: 40px;">
@@ -44,4 +67,4 @@
     <% end %>
     </div>
   </div>
-</div> <!-- #legislature -->
+
