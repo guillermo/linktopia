@@ -13,7 +13,7 @@
           <%= image_tag deputy.political_party.logo_url.to_s, :alt => deputy.political_party_name, :class=> 'political_party', :height => '20px', :style => "position:absolute;" %>
           <img class="deputy_pic" src="<%= deputy.photo_url %>" alt="Diputado con más iniciativas" width="110" height="165" />
           </div>
-          <p><%= deputy.name %></p>
+          <p><%= link_to deputy.name, deputies_path(:anchor => deputy.id) %></p>
         </li>
         <% end %>
       </ul>

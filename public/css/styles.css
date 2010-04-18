@@ -156,6 +156,15 @@ img.deputy_pic {
 	height: 165px;
 }
 
+.deputy a {
+  color: white;
+  text-decoration: none;
+}
+
+.deputy a:hover {
+  text-decoration: underline;
+}
+
 .political_party {
 	position: absolute;
 	right: 0px;

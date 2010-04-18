@@ -16,10 +16,10 @@
       <tbody>
 
         <% @deputies.each do |deputy| %>
-        <tr> 
+        <tr id="<%= deputy.id %>"> 
           <td><span><%= deputy.initiatives_count %></span></td> 
           <td><%= image_tag deputy.photo_url, :height => 50 %></td> 
-          <td class="name"><%= link_to deputy.name, deputy.url %>
+          <td class="name"><%= link_to deputy.name, deputy.url, :target => "_blank" %>
             <br />
             <% if(deputy.initiatives_count.to_i > 0)  %>
             <%= link_to "Iniciativas presentadas", deputy.initiatives_url, :target => '_blank', :class => "external_link" %>, 
