@@ -1,4 +1,3 @@
 #!/bin/bash
 
-echo `pwd`
-touch $RAILS_ROOT/tmp/restart.txt
+touch current/tmp/restart.txt
