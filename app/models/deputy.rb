@@ -16,6 +16,7 @@ class Deputy < ActiveRecord::Base
   delegate :name, :to => :political_party, :prefix => true, :allow_nil => true
   
   named_scope :by_initiatives, {:order => 'initiatives_count DESC'}
+  named_scope :with_initiatives, {:conditions => "initiatives_count > 0"}
   
   class << self
     def load
@@ -103,6 +104,9 @@ class Deputy < ActiveRecord::Base
       scrapper.visit(initiatives_url(1,1))
       self.initiatives_count = (scrapper.at_css('#RESULTADOS_BUSQUEDA .SUBTITULO_CONTENIDO span').inner_html.to_i rescue 0)
       self.save
+      
+      
+      
     end
   end
   handle_asynchronously :load_initiatives

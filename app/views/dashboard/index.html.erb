@@ -4,7 +4,7 @@
       <ul class="deputy">
         <% @deputies.each do |deputy| %>
         <li>
-          <strong>Diputado más activo<br /><span><%= deputy.initiatives_count %></span> iniciativas</strong>
+          <strong>Diputado <%= cycle("más","menos") %> activo<br /><span><%= deputy.initiatives_count %></span> iniciativas</strong>
           <div>
           <%= image_tag deputy.political_party.logo_url.to_s, :alt => deputy.political_party_name, :class=> 'political_party', :height => '20px', :style => "position:absolute;" %>
           <img class="deputy_pic" src="<%= deputy.photo_url %>" alt="Diputado con más iniciativas" width="110" height="165" />
@@ -23,15 +23,15 @@
     <h3>Por partidos</h3>
     <ul class="team">
       <li>
-        <strong><img src="/images/psoe.gif" alt="Logo Psoe" height="81" /></strong>
-        <span>0,7</span> Iniciativas / Diputados</li>
+        <strong><%= image_tag @best_political_party.logo_url, :alt => @best_political_party.name %></strong>
+        <span><%= @best_political_party.initiatives_per_deputy %></span> Iniciativas / Diputados</li>
       <li>
-        <strong><img src="/images/pp.png" alt="Logo PP" height="81" /></strong>
-        <span>0,7</span> Iniciativas / Diputados</li>
+        <strong><%= image_tag @worst_political_party.logo_url, :alt=> @worst_political_party.name %></strong>
+        <span><%= @worst_political_party.initiatives_per_deputy %></span> Iniciativas / Diputados</li>
     </ul>
     
     <ul class="initiatives">
-      <p><strong><%= @initiatives_per_candidate.to_i %></strong>Iniciativas por Diputados</p>
+      <p><strong><%= @initiatives_per_deputy.to_i %></strong>Iniciativas por Diputados</p>
     </ul>
     
   </div>
@@ -42,11 +42,11 @@
     <h3>Total</h3>
     <ul class="total">
       <li id="initiatives">
-        <strong><span>25</span><br />Iniciativas</strong>
+        <strong><span><%= @total_initiatives %></span><br /> Iniciativas presentadas</strong>
       </li>
       <p>presentadas por</p>
       <li id="deputies"> 
-        <strong><span>45</span><br />Diputados</strong> 
+        <strong><span><%= @total_candidates_with_initiatives %></span><br /> Diputados</strong> 
       </li>
     </ul>
   </div>
