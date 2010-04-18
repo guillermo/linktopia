@@ -1,4 +1,4 @@
 /log/*
-db/*.sqlite3
 webrat.log
 config/deploy.rb
+db/test.sqlite3
