@@ -30,22 +30,6 @@ body {
 	text-shadow: 0.3em 0.3em 1em gray ; 
 }
 
-#deputies_page h2 {
-	font-size: 30px;
-	font-family: "Arial Rounded MT Bold", "Trebuchet MS", Verdana, Arial, sans-serif;
-	line-height: 40px;
-	text-shadow: 0.3em 0.3em 1em gray;
-	color:#863e36;
-}
-
-#deputies_page {
-	margin: 0 auto;
-	padding: 35px 0;
-	text-align: center;
-	background: url('../images/shadow.png') no-repeat center top;
-	background-color: #e8e8ea;
-}
-
 #block {
 	background-color: #e8e8ea;
 	margin: 0 auto;
@@ -307,14 +291,18 @@ ul.total strong span{
 	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
 }
 
-table#ranking tr {
-	margin: 5px 0;
+table#ranking td {
+	padding: 5px 0;
+	vertical-align: top;
+}
+table#ranking td.name {
+	padding: 10px 0;
+	vertical-align: top;
 }
 
 #ranking  img.pic{
 	margin: 0px 7px;
 }
-
 
 #ranking span {
 	font-size: 55px;
@@ -322,9 +310,11 @@ table#ranking tr {
 	font-weight: bold;
 }
 
-#ranking strong {
-	font-size: 26px;
-	margin: 8px 15px 8px 0;
+#ranking a{
+	color:#282c33;
+	font-size: 92%;
+	text-shadow: none;
+	
 }
 
 
