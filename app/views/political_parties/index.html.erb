@@ -1,0 +1,32 @@
+<div id="block">
+  <h2>Listado de Partidos Políticos de esta legislatura</h2>
+</div> <!-- #block -->
+
+<div id="step5">
+  <div class="container" style="padding-top: 20px">
+
+    <table id="ranking"> 
+      <thead>
+        <tr>
+          <th>Iniciativas por diputado</th>
+          <th colspan="2">Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% @political_parties.all.each do |pp| %>
+        <tr> 
+          <td><span><%= pp.initiatives_per_deputy %></span></td>
+          <td class="name"><strong class="name"><%=  pp.name %></strong><br/>
+            <p>Con <strong><%= pp.deputies_count  %></strong> <%= pp.deputies_count > 1 ? "diputados" : "diputado" %> y <strong><%= pp.initiatives_count %></strong> iniciativas</p>
+          </td> 
+          <td><%= image_tag pp.logo_url, :height => 50 %></td> 
+        </tr> 
+        <% end %>
+      </tbody>
+    </table>  <!-- #ranking -->
+
+  </div>
+
+
+</div> <!-- #step5 -->

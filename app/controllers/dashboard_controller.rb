@@ -1,6 +1,8 @@
 class DashboardController < ApplicationController
   def index
-    @deputies = [Deputy.by_initiatives.first, Deputy.by_initiatives.last]
+    ic = Deputy.by_initiatives.last.initiatives_count
+    worsts = Deputy.find_all_by_initiatives_count(ic.to_i)
+    @deputies = [Deputy.by_initiatives.first, worsts[rand(worsts.size)]]
   
     @top_deputies_by_initiatives = Deputy.by_initiatives.all(:limit => 5)
     

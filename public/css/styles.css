@@ -330,6 +330,10 @@ table#ranking td.name {
 }
 
 
+table#ranking td.name strong.name{
+  font-size: 28px;
+}
+
 #ranking  img.pic{
 	margin: 0px 7px;
 }
