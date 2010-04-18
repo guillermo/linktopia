@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   config.gem 'mechanize', :version => '0.9.0'
   config.gem 'webrat'
   config.gem 'progressbar'
+  config.gem 'delayed_job'
   
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

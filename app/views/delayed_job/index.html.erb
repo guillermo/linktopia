@@ -1,0 +1,17 @@
+<div id="legislature">
+    <div class="container">
+      <h3>Delayed job (<%= Delayed::Job.count %>)</h3>
+      <table style="border: 1px solid; color:black; background: white; font-size: 10px; font-family: Arial">
+      <% @jobs.find_each do |job|  %>
+      <tr style="background-color: <%= job.failed? ? 'red' : 'white'%>; border: 1px solid gray">
+      <td><%= job.name  %></td>
+      <td><%= job.attempts  %></td>
+      <td><%= job.handler %></td>
+      <td><%= job.last_error %></td>
+      </tr>
+      <% end %>
+      </table>
+      
+  </div>
+</div>
+        

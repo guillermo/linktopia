@@ -2,7 +2,7 @@
 
 <ul>
   <% @deputies.each do |deputy| %>
-  <%= image_tag deputy.photo_url, :size => '20x30' %>
+  <%= image_tag deputy.photo_url.to_s, :size => '20x30' %>
   <!-- <li>
     <%= deputy.name %>
     <p><%= deputy.initiatives_count %></p>

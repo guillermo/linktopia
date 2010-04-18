@@ -25,3 +25,4 @@ class Scrapper < Webrat::MechanizeAdapter
   
   delegate :at_css, :css, :to => :doc
 end
+

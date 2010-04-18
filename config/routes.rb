@@ -35,6 +35,7 @@ ActionController::Routing::Routes.draw do |map|
   # map.root :controller => "welcome"
 
   map.root :controller => "dashboard"
+  map.resources :delayed_job
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
