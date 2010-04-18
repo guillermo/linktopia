@@ -1,6 +1,6 @@
-<div id="weekly">
+<div id="step1">
     <div class="container">
-      <h3>Iniciativas por Parlamentarios</h3>
+      <h3>Iniciativas por Diputados</h3>
       <ul class="deputy">
         <% @deputies.each do |deputy| %>
         <li>
@@ -16,9 +16,9 @@
       
       
     </div>
-</div> <!-- #weekly -->
+</div> <!-- #step1 -->
  
-<div id="monthly">
+<div id="step2">
   <div class="container">
     <h3>Por partidos</h3>
     <ul class="team">
@@ -31,26 +31,24 @@
     </ul>
     
     <ul class="initiatives">
-      <p><strong><%= @initiatives_per_candidate.to_i %></strong>iniciativas por candidato</p>
+      <p><strong><%= @initiatives_per_candidate.to_i %></strong>Iniciativas por Diputados</p>
     </ul>
     
   </div>
-</div>  <!-- #monthly -->
+</div>  <!-- #step2 -->
 
-<div id="legislature">
+<div id="step3">
   <div class="container">
-    <ul class="initiatives">
-      <li>
-        <div class="initiatives_images"><% @initiatives_per_candidate.times do %>
-          <%= image_tag "mini-edit.png" %> 
-        <% end %>
-        </div>
-        <strong><%= @initiatives_per_candidate %> iniciativas</strong>
+    <ul class="total">
+      <li id="initiatives">
+        <strong><span>25</span> Iniciativas presentadas</strong>
       </li>
-      <li></li>
+      <li id="deputies"> 
+        <strong><span>45</span> Diputados</strong> 
+      </li>
     </ul>
   </div>
-  </div> <!-- #legislature -->
+  </div> <!-- #step3 -->
   
   <div class="container">
     <div style="text-align:center; font-size: 30px; line-height: 40px;">

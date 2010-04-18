@@ -37,21 +37,21 @@ body {
 .container h3 {
 	text-align: center;
 	color: #ffffff;
-	margin: 5px 0 15px 0;
+	margin: 5px 0 24px 0;
 	letter-spacing:1px;
-	font-size: 160%;
+	font-size: 40px;
 } 
 
-#weekly {
+#step1 {
 	background: url('../images/bg_r.jpg') repeat-y center;
 } 
 
-#monthly {
+#step2 {
 	background: url('../images/bg_g.jpg') repeat-y center;	
 	
 }
 
-#legislature {
+#step3 {
 	background: url('../images/bg_r.jpg') repeat-y center;
 }
 
@@ -59,7 +59,6 @@ body {
 	background: url('../images/shadow.png') no-repeat center top;
 	width: 900px;
 	margin: 0 auto;
-	padding: 25px 0;
 	overflow: hidden;
 }
 
@@ -74,6 +73,9 @@ body {
 	margin: 0 auto;
 	color: #ffffff;
 }
+
+#step1 .container{
+padding: 25px 0;}
 
 .deputy li {
     width: 300px;
@@ -136,11 +138,15 @@ font-weight:bold;
 
 
 /*  Iniciativas por partido */
+
+#step2 .container {padding-top:25px;}
+
 ul.team {
 	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
-	background: url('../images/arrow2.png') no-repeat center center;
+	background: url('../images/scale.png') no-repeat center center;
 	width: 406px;
 	float: left;
+	margin-top: 20px;
 }
 
 ul.team li {
@@ -151,13 +157,13 @@ ul.team li {
 	text-align: center;	
 	position: relative;
 	color: #ffffff;
-	font-size: 110%;
+	font-size: 127%;
 	line-height: 30px;
 	margin-bottom: 100px;
 }
 
 ul.team li span {
-	font-size: 250%;
+	font-size: 350%;
 	font-weight: bold;
 	margin: 0 50px;
 }
@@ -185,7 +191,7 @@ ul.initiatives {
 	padding: 0 20px;
 	text-align: center;
 	position: relative;
-	background: url('/images/iniciativas.png') no-repeat center center;
+	background: url('../images/iniciativas.png') no-repeat center center;
 }
 
 ul.initiatives p {
@@ -208,7 +214,45 @@ ul.initiatives p {
 }
 
 ul.initiatives p strong {
-	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
+  font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
   font-size: 52px;	
   display: block;
 }
+
+
+/* Total Iniciativas por diputado */
+#step3 .container {
+	padding: 25px 0;
+}
+
+ul.total {
+	width: 500px;
+	margin: 0px auto;
+}
+ul.total li {
+	padding: 25px 0 50px 130px;
+}
+
+ul.total li#initiatives {
+	background: url('../images/doc.png') no-repeat left;
+}
+
+ul.total li#deputies {
+	background: url('../images/user.png') no-repeat left;
+}
+
+ul.total strong {
+	color: #ffffff;
+	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
+	font-size: 127%;
+	display: inline;
+}
+
+ul.total strong span{
+	color: #ffffff;
+	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
+	font-size: 350%;
+	margin-right: 10px;
+}
+
+
