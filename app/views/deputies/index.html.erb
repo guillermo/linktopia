@@ -3,34 +3,37 @@
 </div> <!-- #block -->
 
 <div id="step5">
-    
-  
-  <table id="ranking"> 
-    <thead>
-      <tr>
-        <th>Nº iniciativas</th>
-        <th colspan="2">Nombre</th>
-        <th>Partido Político</th>
-      </tr>
-    </thead>
-<tbody>
-  
-    <% @deputies.each do |deputy| %>
-    <tr> 
-    <td><span><%= deputy.initiatives_count %></span></td> 
-    <td><%= image_tag deputy.photo_url, :height => 50 %></td> 
-    <td class="name"><%= deputy.name %>
-      <br />
-      <a href="" title="Ver iniciativas presentadas">Iniciativas presentadas</a>, <a href="" title="Ver intervenciones realizadas">Intervenciones realizadas</a>
-      
-    </td> 
-    <td><%= image_tag deputy.political_party.logo_url, :height => 40  %></td>
-    </tr> 
-    <% end %>
-  </tbody>
-  </table>  <!-- #ranking -->
+  <div class="container" style="padding-top: 20px">
 
-  
+    <table id="ranking"> 
+      <thead>
+        <tr>
+          <th>Nº iniciativas</th>
+          <th colspan="2">Nombre</th>
+          <th>Partido Político</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% @deputies.each do |deputy| %>
+        <tr> 
+          <td><span><%= deputy.initiatives_count %></span></td> 
+          <td><%= image_tag deputy.photo_url, :height => 50 %></td> 
+          <td class="name"><%= link_to deputy.name, deputy.url %>
+            <br />
+            <% if(deputy.initiatives_count.to_i > 0)  %>
+            <%= link_to "Iniciativas presentadas", deputy.initiatives_url, :target => '_blank', :class => "external_link" %>, 
+            <% end %>
+            <%= link_to "Intervenciones realizadas", deputy.speeches_url, :target => '_blank', :class => "external_link" %>
+
+          </td> 
+          <td><%= image_tag deputy.political_party.logo_url, :height => 40  %></td>
+        </tr> 
+        <% end %>
+      </tbody>
+    </table>  <!-- #ranking -->
+
+  </div>
 
 
 </div> <!-- #step5 -->

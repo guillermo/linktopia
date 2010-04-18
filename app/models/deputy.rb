@@ -66,7 +66,7 @@ class Deputy < ActiveRecord::Base
     url.match(/idDiputado=(\d*)/)[1].to_i
   end
 
-  def initiatives_url(start_page=1, end_page=200)
+  def initiatives_url(start_page=1, end_page=25)
     "http://www.congreso.es/portal/page/portal/Congreso/Congreso/Iniciativas?_piref73_2148295_73_1335437_1335437.next_page=/wc/servidorCGI&CMD=VERLST&BASE=IWI9&FMT=INITXLUS.fmt&DOCS=#{start_page}-#{end_page}&DOCORDER=FIFO&OPDEF=Y&QUERY=(I).ACIN1.+%26+(#{scapped_name}).SAUT."
   end
   
@@ -76,7 +76,6 @@ class Deputy < ActiveRecord::Base
 
   def speeches_url
     "http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/buscarIntervencionesForm&idDiputado=#{congress_id}&tipoIntervenciones=tipo&idLegislatura=9&muestraLeg=false"
-#    "http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/buscarIntervencionesForm&idDiputado=#{congress_id}&tipoIntervenciones=crono&idLegislatura=9&muestraLeg=false"
   end
   
   

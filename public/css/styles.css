@@ -313,7 +313,7 @@ ul.total strong span{
 	width: 800px;
     margin: 0 auto;
 	color: #ffffff;
-	margin: 20px auto 0px;
+	margin:0px auto 0px;
 	padding-top: 20px;
 	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
 }
@@ -321,11 +321,14 @@ ul.total strong span{
 table#ranking td {
 	padding: 5px 0;
 	vertical-align: top;
+	text-align: center;
 }
 table#ranking td.name {
 	padding: 10px 0;
 	vertical-align: top;
+	text-align: left;
 }
+
 
 #ranking  img.pic{
 	margin: 0px 7px;
@@ -337,10 +340,20 @@ table#ranking td.name {
 	font-weight: bold;
 }
 
-#ranking a{
+#ranking a {
+  color: white;
+  text-decoration: none;
+}
+
+#ranking a:hover {
+  text-decoration: underline;
+}
+
+#ranking a.external_link{
 	color:#282c33;
 	font-size: 92%;
 	text-shadow: none;
+	text-decoration: underline;
 	
 }
 
