@@ -1,4 +1,4 @@
 #!/bin/bash
 
-puts pwd
+echo `pwd`
 touch $RAILS_ROOT/tmp/restart.txt
