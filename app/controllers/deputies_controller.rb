@@ -1,7 +1,7 @@
 class DeputiesController < ApplicationController
   def index
     
-    @deputies = Deputy.all(:order => 'initiatives_count DESC')
+    @deputies = Deputy.by_initiatives
   end
 
 end

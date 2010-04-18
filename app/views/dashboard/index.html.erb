@@ -4,7 +4,7 @@
       <ul class="deputy">
         <% @deputies.each do |deputy| %>
         <li>
-          <strong><span><%= deputy.initiatives_count %></span> iniciativas</strong>
+          <strong>Diputado más activo<br /><span><%= deputy.initiatives_count %></span> iniciativas</strong>
           <div>
           <%= image_tag deputy.political_party.logo_url.to_s, :alt => deputy.political_party_name, :class=> 'political_party', :height => '20px', :style => "position:absolute;" %>
           <img class="deputy_pic" src="<%= deputy.photo_url %>" alt="Diputado con más iniciativas" width="110" height="165" />
@@ -39,22 +39,26 @@
 
 <div id="step3">
   <div class="container">
+    <h3>Total</h3>
     <ul class="total">
       <li id="initiatives">
-        <strong><span>25</span> Iniciativas presentadas</strong>
+        <strong><span>25</span><br />Iniciativas</strong>
       </li>
+      <p>presentadas por</p>
       <li id="deputies"> 
-        <strong><span>45</span> Diputados</strong> 
+        <strong><span>45</span><br />Diputados</strong> 
       </li>
     </ul>
   </div>
   </div> <!-- #step3 -->
   
-  <div class="container">
+  <div id="step4">
+    <div class="container">
     <div style="text-align:center; font-size: 30px; line-height: 40px;">
     <% @top_deputies_by_initiatives.each_with_index do |deputy,i| %>
     <p style="font-size:<%= 100-i*15 %>%; line-height: <%= 100-i %>%;"><strong><%= deputy.initiatives_count %></strong> iniciativas de <em><%= deputy.name %></em> <%= deputy.parliamentary_group_name %></p>
     <% end %>
     </div>
   </div>
+  </div> <!-- #step4 -->
 

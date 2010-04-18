@@ -1,12 +1,30 @@
-<h1>Deputies</h1>
+<div id="deputies_page"><h2>Ranking de Diputados que más iniciativas aportan</h2></div>
 
-<ul>
+<div id="step5">
+    
+  
+  <table id="ranking"> 
+  <tr> 
+  <td><span>34567</span></td> 
+  <td><img class="pic" alt="92_9" height="132" src="http://www.congreso.es/wc/htdocs/web/img/diputados/92_9.jpg" width="88" /></td> 
+  <td><strong>Cortés Martín, Miguel Ángel</strong></td> 
+  <td><img src="/images/minilogo.jpg" alt="Logo" height="40" /></td>
+  </tr> 
+  <tr> 
+  <td><span>34567</span></td> 
+  <td><img class="pic" alt="92_9" height="132" src="http://www.congreso.es/wc/htdocs/web/img/diputados/92_9.jpg" width="88" /></td>
+  <td><strong>Merino López, Rafael</strong></td> 
+  <td><img src="/images/minilogo.jpg" alt="Logo" height="40" /></td> 
+  </tr> 
+  </table>  <!-- #ranking -->
+
+  
   <% @deputies.each do |deputy| %>
-  <%= image_tag deputy.photo_url.to_s, :size => '20x30' %>
-  <!-- <li>
-    <%= deputy.name %>
-    <p><%= deputy.initiatives_count %></p>
-    <p><%= deputy.political_party_name %></p>
-  </li> -->
+  <li>
+  <%= image_tag deputy.photo_url, :size => '20x30' %>
+  <%= deputy.name %>
+  </li>
   <% end %>
-</ul>
+
+
+</div> <!-- #step5 -->
