@@ -1,29 +1,30 @@
 body {
 	font-size: medium;
 	font-family: "Arial Rounded MT Bold", "Trebuchet MS", Verdana, Arial, sans-serif;
-	
-}
+  text-shadow: 0.1em 0.1em 0.2em black;
+} 
 
 #header {
 	background: #282c33 url('../images/header.jpg') no-repeat center;
 	height: 86px;
 	margin: 0 auto;
+	text-align: center;
 }
 
-h1 {
-	width: 900px;
-	margin: 0 auto;
+#header h1 {
+  padding-top: 22px;
+  font-size: 36px;
 }
 
-h1 a {
-	display: block;
-	text-indent: -2000px;
+#header h1 a {
+  color: white;
 }
 
 #block h2 {
 	font-size: 30px;
 	font-family: "Arial Rounded MT Bold", "Trebuchet MS", Verdana, Arial, sans-serif;
 	line-height: 40px;
+	text-shadow: 0.3em 0.3em 1em gray ; 
 }
 
 #block {
@@ -59,6 +60,7 @@ h1 a {
 	width: 900px;
 	margin: 0 auto;
 	padding: 25px 0;
+	overflow: hidden;
 }
 
 
@@ -74,17 +76,23 @@ h1 a {
 }
 
 .deputy li {
-        width: 300px;
-        min-height: 250px;        
-        display: -moz-inline-stack;
-        display: inline-block;
-        vertical-align: top;
-        margin: 5px;
-        zoom: 1;
-        *display: inline;
-        _height: 250px;
-    }
+    width: 300px;
+    min-height: 250px;        
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+    zoom: 1;
+    *display: inline;
+    _height: 250px;
+}
 
+img.deputy_pic {
+  box-shadow: 3px 3px 10em  black;
+  -moz-box-shadow:3px 3px 10em  black ;
+  -webkit-box-shadow:3px 3px 10em  black;
+  display:block;
+}
 .deputy li strong {
 	text-align: center;
 	font-size:120%;
@@ -165,16 +173,42 @@ ul.team li span {
 
 .team strong img {
 	margin: 0px auto;
-	display: block;
+	display: block;  
 }
 
 
 /* Iniciativas por candidato */
 
 ul.initiatives {
-	width: 406px; 
+	width: 366px; 
+	float: left;
+	padding: 0 20px;
+	text-align: center;
+	position: relative;
+	background: url('/images/iniciativas.png') no-repeat center center;
 }
 
-ul.initiatives .initiatives_images img {
-	margin-left: -3px;
+ul.initiatives p {
+  margin: 100px 50px;
+	text-align:center;
+	font-size: 20px;
+	color: black;
+	text-shadow: 0em 0em 1em  white;
+  background-color: rgba(255,255,255,0.7);
+
+  text-shadow: none;
+
+  padding: 20px 0;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10em  black;
+  -moz-box-shadow:3px 3px 10em  black ;
+   -webkit-box-shadow:3px 3px 10em  black;
+}
+
+ul.initiatives p strong {
+	font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
+  font-size: 52px;	
+  display: block;
 }

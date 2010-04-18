@@ -31,15 +31,7 @@
     </ul>
     
     <ul class="initiatives">
-      <li>
-        <div class="initiatives_images">
-          <% @initiatives_per_candidate.times do %>
-            <%= image_tag "mini-edit.png" %> 
-          <%end%>
-        </div>
-        <strong><%= @initiatives_per_candidate %> iniciativas</strong>
-      </li>
-      <li></li>
+      <p><strong><%= @initiatives_per_candidate.to_i %></strong>iniciativas por candidato</p>
     </ul>
     
   </div>

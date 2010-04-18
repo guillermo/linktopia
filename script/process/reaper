@@ -1,3 +1,4 @@
 #!/bin/bash
 
-touch tmp/restart.txt
+puts pwd
+touch $RAILS_ROOT/tmp/restart.txt
