@@ -2,16 +2,14 @@
     <div class="container">
       <h3>Diputados que han aportado...</h3>
       <ul class="deputy">
-        <li style="margin-right:200px;margin-left:20px">
-          <strong><span>34</span> iniciativas</strong>
-          <img class="deputy_pic" src="/images/diputado01.jpg" alt="Diputado con más iniciativas" width="110" height="165" />
-          <p>Conde Roa, Gerardo Jesús</p>
-        </li>
+        <% @deputies.each do |deputy| %>
         <li>
-          <strong><span>0</span> iniciativas</strong>
-          <img class="deputy_pic" src="/images/diputado02.jpg" alt="Diputado con menos iniciativas" width="110" height="165" />
-          <p>Hermosín Bono, Carmen<br />y <span>5</span> diputados más</p>
+          <strong><span><%= deputy.initiatives_count %></span> iniciativas</strong>
+          <%= image_tag deputy.political_party.logo_url.to_s, :alt => deputy.political_party_name, :class=> 'deputy_pic', :height => '20px', :style => "position:absolute;" %>
+          <img class="deputy_pic" src="<%= deputy.photo_url %>" alt="Diputado con más iniciativas" width="110" height="165" />
+          <p><%= deputy.name %></p>
         </li>
+        <% end %>
       </ul>
     </div>
 </div> <!-- #weekly -->
@@ -30,5 +28,20 @@
 
 <div id="legislature">
   <div class="container">
+    <ul class="">
+      <li style="">
+        <div><% @initiatives_per_candidate.times do %><%= image_tag "mini-edit.png" %> <%end%></div>
+        <strong><%= @initiatives_per_candidate %> iniciativas</strong>
+      </li>
+      <li></li>
+    </ul>
+  </div>
+  
+  <div class="container">
+    <div style="text-align:center; font-size: 30px; line-height: 40px;">
+    <% @top_deputies_by_initiatives.each_with_index do |deputy,i| %>
+    <p style="font-size:<%= 100-i*15 %>%; line-height: <%= 100-i %>%;"><strong><%= deputy.initiatives_count %></strong> iniciativas de <em><%= deputy.name %></em> <%= deputy.parliamentary_group_name %></p>
+    <% end %>
+    </div>
   </div>
 </div> <!-- #legislature -->

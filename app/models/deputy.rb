@@ -80,7 +80,9 @@ class Deputy < ActiveRecord::Base
       self.photo_url = "http://www.congreso.es"+scrapper.css('p.logo_grupo img').first["src"]
       
       pp_name = scrapper.at_css('p.nombre_grupo').inner_html
+      pp_photo_url = scrapper.at_css('p.logo_grupo a img')["src"]
       self.political_party = PoliticalParty.find_or_create_by_name(pp_name)
+      self.political_party.update_attribute(:logo_url, "http://www.congreso.es"+pp_photo_url)
       self.save
     end
   end
