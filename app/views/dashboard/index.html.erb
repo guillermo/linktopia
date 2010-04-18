@@ -4,7 +4,7 @@
 
 <div id="step1">
     <div class="container">
-      <h3>Iniciativas por Diputados</h3>
+      <h3>Iniciativas por <a href="/deputies" title="Ver listado de Diputados">Diputados</a></h3>
       <ul class="deputy">
         <% @deputies.each do |deputy| %>
         <li>
@@ -56,13 +56,5 @@
   </div>
   </div> <!-- #step3 -->
   
-  <div id="step4">
-    <div class="container">
-    <div style="text-align:center; font-size: 30px; line-height: 40px;">
-    <% @top_deputies_by_initiatives.each_with_index do |deputy,i| %>
-    <p style="font-size:<%= 100-i*15 %>%; line-height: <%= 100-i %>%;"><strong><%= deputy.initiatives_count %></strong> iniciativas de <em><%= deputy.name %></em> <%= deputy.parliamentary_group_name %></p>
-    <% end %>
-    </div>
-  </div>
   </div> <!-- #step4 -->
 

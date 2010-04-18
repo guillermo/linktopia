@@ -45,6 +45,15 @@ body {
 	font-size: 40px;
 } 
 
+.container h3 a{
+	color: #ffffff;
+}
+
+.container h3 a:hover {
+	color: #adabab;
+	
+}
+
 #step1 {
 	background: url('../images/bg_r.jpg') repeat-y center;
 } 
@@ -62,6 +71,24 @@ body {
 	background: url('../images/bg_g.jpg') repeat-y center;	
 	
 }
+
+#step4 .container {
+	background: url('../images/shadow.png') no-repeat center top;
+	color: #eee;
+	text-align:center;
+	padding: 30px;
+	font-size: 14px;
+	font-family: Arial, sans;
+	font-weight: normal;
+	text-shadow: 1px 1px 2px black;
+	line-height: 18px;
+}
+
+#step4 a {
+	color: white;
+	}
+	
+#step4 a:hover {color: #1f2329;}
 
 #step5 {
 	background: url('../images/bg_g.jpg') repeat-y center;	
@@ -174,7 +201,7 @@ ul.team li {
 	color: #ffffff;
 	font-size: 127%;
 	line-height: 30px;
-	margin-bottom: 100px;
+	margin-bottom: 67px;
 }
 
 ul.team li span {
@@ -261,7 +288,7 @@ ul.total li#initiatives {
 
 ul.total li#deputies {
 	background: url('../images/user.png') no-repeat left;
-	/*text-align: center;*/
+	padding-left: 174px;
 }
 
 ul.total strong {
@@ -317,6 +344,7 @@ table#ranking td.name {
 	
 }
 
+#ranking thead th {padding-bottom: 15px;}
 
 
 
